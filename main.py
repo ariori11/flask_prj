@@ -13,7 +13,7 @@ cursor = connection.cursor()
 
 @app.route('/')
 def index():
-    res = requests.get('https://test-blog-api-1.onrender.com')
+    res = requests.get('https://test-blog-api-1.onrender.com/posts/')
 
     statement = f"INSERT INTO {TABLE_NAME}(title,body,owner) values(?, ?, ?)"
 
